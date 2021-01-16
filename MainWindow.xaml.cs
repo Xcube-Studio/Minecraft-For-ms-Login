@@ -19,11 +19,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
-<<<<<<< HEAD
 using System.Net;
 using System.IO;
-=======
->>>>>>> 35afb577e559903c00a39e7d08308e824c2059b4
+
 
 namespace ms_Login
 {
@@ -36,7 +34,6 @@ namespace ms_Login
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
         public class mjs2
         {
             public class Skins
@@ -74,8 +71,7 @@ namespace ms_Login
             }
 
         }
-=======
->>>>>>> 35afb577e559903c00a39e7d08308e824c2059b4
+
         public class xbox_1
         {
             public class Xui
@@ -107,7 +103,6 @@ namespace ms_Login
             }
 
         }
-<<<<<<< HEAD
         public static string HttpGet(string Url, string token = null)
         {
             try { 
@@ -130,8 +125,6 @@ namespace ms_Login
            }
             catch { return "{errorMessage:\"你没有使用微软账号登录的Minecraft账号qwq\"}"; }
         }
-=======
->>>>>>> 35afb577e559903c00a39e7d08308e824c2059b4
         public static string JsonPost(string url, string xmlString)
 
         {
@@ -197,7 +190,6 @@ namespace ms_Login
             string ms_access_token = msjson_rt.access_token;
             _UUID.Content = ms_access_token;
             _static.Content = "已获取到ms_access_token，即将执行验证XBOX LIVE登录key";
-<<<<<<< HEAD
             next = " {\"Properties\":{\"AuthMethod\":\"RPS\",\"SiteName\":\"user.auth.xboxlive.com\",\"RpsTicket\":\"" + ms_access_token + "\"},\"RelyingParty\":\"http://auth.xboxlive.com\",\"TokenType\": \"JWT\" }";
             Clipboard.SetDataObject(next);
             string xboxlive_1= JsonPost("https://user.auth.xboxlive.com/user/authenticate", next);
@@ -221,14 +213,8 @@ namespace ms_Login
             catch { MessageBox.Show(rt_mjs2.errorMessage); }
             _UUID.Content = uuid;
             _static.Content = "全部步骤已完成，uuid=" + uuid+rt_mjs2.errorMessage;
-=======
-            next = " {\"Properties\":{\"AuthMethod\":\"RPS\",\"SiteName\":\"user.auth.xboxlive.com\",\"RpsTicket\":\"d=" + ms_access_token + "\"},\"RelyingParty\":\"http://auth.xboxlive.com\",\"TokenType\": \"JWT\" }";
-            string xboxlive_1= JsonPost("https://user.auth.xboxlive.com/user/authenticate", next);
-            MessageBox.Show(xboxlive_1);
-            xbox_1.Root xbox_S1= JsonConvert.DeserializeObject<xbox_1.Root>(xboxlive_1);
-            _UUID.Content = xbox_S1.Token;
 
->>>>>>> 35afb577e559903c00a39e7d08308e824c2059b4
+
         }
         private void MyBrowser_AddressChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
